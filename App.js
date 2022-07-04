@@ -2,8 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Home from './components/Home';
 import Details from './components/Details';
-import Liked from './components/Liked';
-import Profile from './components/Profile';
+import Courses from './components/Courses';
+import Webinar from './components/Webinar';
 import colors from './assets/colors/colors';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -37,8 +37,8 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Liked"
-        component={Liked}
+        name="Courses"
+        component={Courses}
         options={{
           tabBarIcon: ({color}) => (
             <Entypo name="heart" size={32} color={color} />
@@ -46,8 +46,8 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={Profile}
+        name="Webinar"
+        component={Webinar}
         options={{
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="account" size={32} color={color} />

@@ -6,7 +6,7 @@ import {
   ImageBackground,
   Dimensions,
 } from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import colors from '../assets/colors/colors';
 import Entypo from 'react-native-vector-icons/Entypo';
 
@@ -16,6 +16,8 @@ const Details = ({route, navigation}) => {
   const {item} = route.params;
   return (
     <View style={styles.container}>
+      <ScrollView>
+
       <ImageBackground source={item.imageBig} style={styles.backgroundImage}>
         <TouchableOpacity
           style={styles.backIcon}
@@ -30,45 +32,46 @@ const Details = ({route, navigation}) => {
           </View>
         </View>
       </ImageBackground>
-      <View style={styles.descriptionWrapper}>
-        <View style={styles.heartWrapper}>
-          <Entypo name="heart" size={32} color={colors.orange} />
-        </View>
-        <View style={styles.descriptionTextWrapper}>
-          <Text style={styles.descriptionTitle}>Description</Text>
-          <Text style={styles.descriptionText}>{item.description}</Text>
-        </View>
+        <View style={styles.descriptionWrapper}>
+          <View style={styles.heartWrapper}>
+            <Entypo name="heart" size={32} color={colors.orange} />
+          </View>
+          <View style={styles.descriptionTextWrapper}>
+            <Text style={styles.descriptionTitle}>Description</Text>
+            <Text style={styles.descriptionText}>{item.description}</Text>
+          </View>
 
-        <View style={styles.infoWrapper}>
-          <View style={styles.infoItem}>
-            <Text style={styles.infoTitle}>PRICE</Text>
-            <View style={styles.infoTextWrapper}>
-              <Text style={styles.infoText}>${item.price}</Text>
-              <Text style={styles.infoSubText}>/person</Text>
+          <View style={styles.infoWrapper}>
+            <View style={styles.infoItem}>
+              <Text style={styles.infoTitle}>PRICE</Text>
+              <View style={styles.infoTextWrapper}>
+                <Text style={styles.infoText}>${item.price}</Text>
+                <Text style={styles.infoSubText}>/person</Text>
+              </View>
+            </View>
+            <View style={styles.infoItem}>
+              <Text style={styles.infoTitle}>RATING</Text>
+              <View style={styles.infoTextWrapper}>
+                <Text style={styles.infoText}>${item.rating}</Text>
+                <Text style={styles.infoSubText}>/5</Text>
+              </View>
+            </View>
+            <View style={styles.infoItem}>
+              <Text style={styles.infoTitle}>DURATION</Text>
+              <View style={styles.infoTextWrapper}>
+                <Text style={styles.infoText}>${item.duration}</Text>
+                <Text style={styles.infoSubText}> Month</Text>
+              </View>
             </View>
           </View>
-          <View style={styles.infoItem}>
-            <Text style={styles.infoTitle}>RATING</Text>
-            <View style={styles.infoTextWrapper}>
-              <Text style={styles.infoText}>${item.rating}</Text>
-              <Text style={styles.infoSubText}>/5</Text>
-            </View>
-          </View>
-          <View style={styles.infoItem}>
-            <Text style={styles.infoTitle}>DURATION</Text>
-            <View style={styles.infoTextWrapper}>
-              <Text style={styles.infoText}>${item.duration}</Text>
-              <Text style={styles.infoSubText}> hours</Text>
-            </View>
-          </View>
-        </View>
 
-        <TouchableOpacity
-          style={styles.buttonWrapper}
-          onPress={() => alert('You booked a trip!')}>
-          <Text style={styles.buttonText}>Book Now</Text>
-        </TouchableOpacity>
-      </View>
+          <TouchableOpacity
+            style={styles.buttonWrapper}
+            onPress={() => alert('Your Course has been Add!')}>
+            <Text style={styles.buttonText}>Corse Add</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </View>
   );
 };
