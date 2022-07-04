@@ -11,6 +11,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Login from './Src/Screen/Login';
+import SignUp from './Src/Screen/SignUp';
 
 Entypo.loadFont();
 MaterialCommunityIcons.loadFont();
@@ -61,7 +63,7 @@ const TabNavigator = () => {
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='Login'>
         <Stack.Screen
           name="TabNavigator"
           component={TabNavigator}
@@ -70,6 +72,16 @@ const App = () => {
         <Stack.Screen
           name="Details"
           component={Details}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="SignUp"
+          component={SignUp}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

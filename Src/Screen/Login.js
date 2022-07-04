@@ -110,12 +110,13 @@ const Login = ({navigation}) => {
           <View style={styles.signUp}>
             <TouchableOpacity
               onPress={() => {
-                alert('SignUp');
+                navigation.navigate('SignUp');
               }}
-              style={styles.appButtonContainer}>
-              <Text style={styles.appButtonText}>SignUp</Text>
+              style={styles.appButtonContaineSecondry}>
+              <Text style={styles.appButtonTextSecondry}>SignUp</Text>
             </TouchableOpacity>
           </View>
+          <View style={styles.signUp}></View>
         </View>
       </ScrollView>
     </View>
@@ -183,7 +184,7 @@ const styles = StyleSheet.create({
   input: {
     height: 45,
     margin: 12,
-    width: '90%',
+    width: '93%',
     borderWidth: 1,
     padding: 10,
     borderColor: '#D9E1E7',
@@ -203,7 +204,7 @@ const styles = StyleSheet.create({
     elevation: 8,
     backgroundColor: '#E76F51',
     borderRadius: 10,
-    paddingVertical: 10,
+    paddingVertical: 13,
     paddingHorizontal: 12,
     width: '95%',
     marginLeft: 10,
@@ -211,6 +212,40 @@ const styles = StyleSheet.create({
   appButtonText: {
     fontSize: 18,
     color: '#fff',
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    textTransform: 'uppercase',
+  },
+  appButtonContaineSecondry: {
+    elevation: 8,
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    paddingVertical: 13,
+    paddingHorizontal: 12,
+    width: '95%',
+    borderColor: '#E76F51',
+    marginLeft: 10,
+  },
+  appButtonTextSecondry: {
+    fontSize: 18,
+    color: '#E76F51',
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    textTransform: 'uppercase',
+  },
+  appButtonContaineSecondry: {
+    elevation: 8,
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    paddingVertical: 13,
+    paddingHorizontal: 12,
+    width: '95%',
+    borderColor: '#E76F51',
+    marginLeft: 10,
+  },
+  appButtonTextSecondry: {
+    fontSize: 18,
+    color: '#E76F51',
     fontWeight: 'bold',
     alignSelf: 'center',
     textTransform: 'uppercase',
