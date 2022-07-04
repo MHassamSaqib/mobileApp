@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import Home from './components/Home';
-import Details from './components/Details';
-import Courses from './components/Courses';
-import Webinar from './components/Webinar';
+import Home from './Src/components/Home';
+import Details from './Src/components/Details';
+import Courses from './Src/components/Courses';
+import Webinar from './Src/components/Webinar';
 import colors from './assets/colors/colors';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
