@@ -137,7 +137,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   discoverWrapper: {
-    // marginHorizontal: 20,
     marginTop: 20,
   },
   discoverTitle: {

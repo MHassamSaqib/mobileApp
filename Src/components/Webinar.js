@@ -18,7 +18,6 @@ import {FlatList, TouchableOpacity} from 'react-native-gesture-handler';
 
 Feather.loadFont();
 Entypo.loadFont();
-
 const Like = ({navigation}) => {
   const renderDiscoverItem = ({item}) => {
     return (
